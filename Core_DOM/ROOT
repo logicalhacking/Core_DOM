@@ -1,0 +1,10 @@
+chapter AFP
+
+session "Core_DOM" (AFP) = "HOL-Library" + 
+  options [timeout = 4800, document = pdf, document_variants="document:outline=/proof,/ML",document_output=output]
+  theories
+    Core_DOM
+    Core_DOM_Tests
+  document_files 
+    "root.tex"
+    "root.bib"
