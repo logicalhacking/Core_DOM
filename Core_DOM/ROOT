@@ -1,6 +1,6 @@
 chapter AFP
 
-session "Core_DOM" (AFP) = "HOL-Library" + 
+session "Core_DOM-devel" (AFP) = "HOL-Library" + 
   options [timeout = 4800, document = pdf, document_variants="document:outline=/proof,/ML",document_output=output]
   theories
     Core_DOM
