@@ -75,7 +75,7 @@ global_interpretation l_get_M\<^sub>N\<^sub>o\<^sub>d\<^sub>e_lemmas type_wf by 
 lemma node_ptr_kinds_M_reads: 
   "reads (\<Union>object_ptr. {preserved (get_M\<^sub>O\<^sub>b\<^sub>j\<^sub>e\<^sub>c\<^sub>t object_ptr RObject.nothing)}) node_ptr_kinds_M h h'"
   using object_ptr_kinds_M_reads
-  apply(simp add: reads_def node_ptr_kinds_M_defs node_ptr_kinds_M_defs node_ptr_kinds_def
+  apply(simp add: reads_def node_ptr_kinds_M_defs node_ptr_kinds_def
       object_ptr_kinds_M_reads preserved_def)
   by (metis (mono_tags, hide_lams)  object_ptr_kinds_preserved_small old.unit.exhaust preserved_def)
 

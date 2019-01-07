@@ -364,10 +364,8 @@ lemma put_M\<^sub>E\<^sub>l\<^sub>e\<^sub>m\<^sub>e\<^sub>n\<^sub>t_tag_type_typ
   apply(auto simp add: is_node_kind_def type_wf_defs ElementClass.type_wf_defs 
       NodeClass.type_wf_defs ElementMonad.get_M_defs split: option.splits)[1]
   using ObjectMonad.type_wf_put_ptr_in_heap_E ObjectMonad.type_wf_put_ptr_not_in_heap_E apply blast
-   apply (metis (mono_tags, lifting) ElementMonad.a_get_M_def bind_eq_Some_conv error_returns_result 
-      get\<^sub>E\<^sub>l\<^sub>e\<^sub>m\<^sub>e\<^sub>n\<^sub>t_def get_heap_returns_result option.exhaust_sel option.simps(4))
-  by (metis (no_types, lifting) ElementMonad.a_get_M_def error_returns_result 
-      get_heap_returns_result option.exhaust_sel option.simps(4))
+   apply (metis (mono_tags, lifting) bind_eq_Some_conv get\<^sub>E\<^sub>l\<^sub>e\<^sub>m\<^sub>e\<^sub>n\<^sub>t_def option.exhaust_sel)
+  by (metis (no_types, lifting) option.exhaust_sel )
 
 
 lemma put_M\<^sub>E\<^sub>l\<^sub>e\<^sub>m\<^sub>e\<^sub>n\<^sub>t_child_nodes_type_wf_preserved [simp]: 
@@ -394,8 +392,7 @@ lemma put_M\<^sub>E\<^sub>l\<^sub>e\<^sub>m\<^sub>e\<^sub>n\<^sub>t_child_nodes_
   using ObjectMonad.type_wf_put_ptr_in_heap_E ObjectMonad.type_wf_put_ptr_not_in_heap_E apply blast
    apply (metis (mono_tags, lifting) ElementMonad.a_get_M_def bind_eq_Some_conv error_returns_result 
       get\<^sub>E\<^sub>l\<^sub>e\<^sub>m\<^sub>e\<^sub>n\<^sub>t_def get_heap_returns_result option.exhaust_sel option.simps(4))
-  by (metis (no_types, lifting) ElementMonad.a_get_M_def error_returns_result get_heap_returns_result 
-      option.exhaust_sel option.simps(4))
+  by (metis (no_types, lifting) option.exhaust_sel)
 
 lemma put_M\<^sub>E\<^sub>l\<^sub>e\<^sub>m\<^sub>e\<^sub>n\<^sub>t_attrs_type_wf_preserved [simp]: 
   "h \<turnstile> put_M element_ptr attrs_update v \<rightarrow>\<^sub>h h' \<Longrightarrow> type_wf h = type_wf h'"
@@ -416,7 +413,7 @@ lemma put_M\<^sub>E\<^sub>l\<^sub>e\<^sub>m\<^sub>e\<^sub>n\<^sub>t_attrs_type_w
       ElementMonad.get_M_defs split: option.splits)[1]
   using ObjectMonad.type_wf_put_ptr_in_heap_E ObjectMonad.type_wf_put_ptr_not_in_heap_E apply blast
    apply (metis (mono_tags, lifting) ElementMonad.a_get_M_def bind_eq_Some_conv error_returns_result get\<^sub>E\<^sub>l\<^sub>e\<^sub>m\<^sub>e\<^sub>n\<^sub>t_def get_heap_returns_result option.exhaust_sel option.simps(4))
-  by (metis (no_types, lifting) ElementMonad.a_get_M_def error_returns_result get_heap_returns_result option.exhaust_sel option.simps(4))
+  by (metis (no_types, lifting) option.exhaust_sel)
 
 lemma put_M\<^sub>E\<^sub>l\<^sub>e\<^sub>m\<^sub>e\<^sub>n\<^sub>t_shadow_root_opt_type_wf_preserved [simp]: 
   "h \<turnstile> put_M element_ptr shadow_root_opt_update v \<rightarrow>\<^sub>h h' \<Longrightarrow> type_wf h = type_wf h'"
@@ -437,8 +434,7 @@ lemma put_M\<^sub>E\<^sub>l\<^sub>e\<^sub>m\<^sub>e\<^sub>n\<^sub>t_shadow_root_
       ElementMonad.get_M_defs split: option.splits)[1]
   using ObjectMonad.type_wf_put_ptr_in_heap_E ObjectMonad.type_wf_put_ptr_not_in_heap_E apply blast
    apply (metis (mono_tags, lifting) bind_eq_Some_conv get\<^sub>E\<^sub>l\<^sub>e\<^sub>m\<^sub>e\<^sub>n\<^sub>t_def)
-  by (metis (no_types, lifting) ElementMonad.a_get_M_def error_returns_result get_heap_returns_result 
-      option.exhaust_sel option.simps(4))
+  by (metis (no_types, lifting) option.exhaust_sel)
 
 
 lemma new_character_data_type_wf_preserved [simp]: 

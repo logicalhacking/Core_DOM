@@ -32,7 +32,7 @@ text\<open>In this theory, we introduce the basic infrastructure for our encodin
 of classes.\<close>
 theory BaseClass
   imports
-    "~~/src/HOL/Library/Finite_Map"
+    "HOL-Library.Finite_Map"
     "../pointers/Ref"
     "../Core_DOM_Basic_Datatypes" 
 begin

@@ -591,7 +591,7 @@ lemma filter_M_ex1:
     and "h \<turnstile> P x \<rightarrow>\<^sub>r True"
   shows "ys = [x]"
 proof -
-  have "\<exists>!x \<in> set xs. |h \<turnstile> P x|\<^sub>r"
+  have *: "\<exists>!x \<in> set xs. |h \<turnstile> P x|\<^sub>r"
     apply(insert assms(1) assms(3) assms(4))
     apply(drule filter_M_filter) 
      apply(simp)
@@ -601,7 +601,7 @@ proof -
     apply(insert assms(1) assms(4))
     apply(drule filter_M_filter)
      apply(auto)[1] 
-    by (metis \<open>\<exists>!x. x \<in> set xs \<and> |h \<turnstile> P x|\<^sub>r\<close> assms(2) assms(5) assms(6) distinct_filter 
+    by (metis * assms(2) assms(5) assms(6) distinct_filter 
         distinct_length_2_or_more filter_empty_conv filter_set list.exhaust 
         list.set_intros(1) list.set_intros(2) member_filter select_result_I2)
 qed

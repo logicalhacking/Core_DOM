@@ -5882,7 +5882,6 @@ proof -
     moreover have "set |h3 \<turnstile> get_disconnected_nodes x|\<^sub>r \<inter> set |h3 \<turnstile> get_disconnected_nodes y|\<^sub>r = {}"
       using calculation by(auto dest: distinct_concat_map_E(1))
     ultimately show "False"
-      apply(-)
       apply(cases "x = document_ptr")
        apply (metis (no_types) NodeMonad.ptr_kinds_ptr_kinds_M \<open>a_all_ptrs_in_heap h\<close> 
                                 \<open>cast new_character_data_ptr \<notin> set |h \<turnstile> node_ptr_kinds_M|\<^sub>r\<close> 
@@ -5912,7 +5911,6 @@ proof -
       and 6: "x \<in> set |h' \<turnstile> get_disconnected_nodes xb|\<^sub>r"
     show "False"
       using disc_nodes_document_ptr_h disconnected_nodes_eq2_h3
-      apply -
       apply(cases "xb = document_ptr")
        apply (metis (no_types, hide_lams) "3" "4" "6"
                     \<open>\<And>p. p |\<in>| object_ptr_kinds h3 \<Longrightarrow> cast new_character_data_ptr \<notin> set |h3 \<turnstile> get_child_nodes p|\<^sub>r\<close> 
@@ -5927,11 +5925,11 @@ proof -
   then have "a_owner_document_valid h'"
     using disc_nodes_h3 \<open>document_ptr |\<in>| document_ptr_kinds h\<close>
     apply(simp add: a_owner_document_valid_def)
-    apply(simp add:  object_ptr_kinds_eq_h object_ptr_kinds_eq_h3 )
+    apply(simp add: object_ptr_kinds_eq_h object_ptr_kinds_eq_h3 )
     apply(simp add: object_ptr_kinds_eq_h2)
-    apply(simp add:  document_ptr_kinds_eq_h document_ptr_kinds_eq_h3 )
+    apply(simp add: document_ptr_kinds_eq_h document_ptr_kinds_eq_h3 )
     apply(simp add: document_ptr_kinds_eq_h2)
-    apply(simp add:  node_ptr_kinds_eq_h node_ptr_kinds_eq_h3 )
+    apply(simp add: node_ptr_kinds_eq_h node_ptr_kinds_eq_h3 )
     apply(simp add: node_ptr_kinds_eq_h2 node_ptr_kinds_eq_h )
     apply(auto simp add: children_eq2_h2[symmetric] children_eq2_h3[symmetric] disconnected_nodes_eq2_h 
                          disconnected_nodes_eq2_h2 disconnected_nodes_eq2_h3)[1]
