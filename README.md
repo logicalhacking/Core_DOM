@@ -12,7 +12,7 @@ submitted (as an update of the Core_DOM entry) at a later stage.
 ## How to build
 
 ```
-isabelle build -d Core_DOM Core_DOM 
+isabelle build -D Core_DOM
 ```
 
 ## Authors
