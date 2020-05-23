@@ -11,8 +11,8 @@ submitted (as an update of the Core_DOM entry) at a later stage.
 
 ## How to build
 
-```
-isabelle build -D Core_DOM
+```console
+achim@logicalhacking:~$ isabelle build -D Core_DOM
 ```
 
 ## Authors
