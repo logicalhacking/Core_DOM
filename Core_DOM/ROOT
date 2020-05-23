@@ -1,10 +1,16 @@
 chapter AFP
 
 session "Core_DOM-devel" (AFP) = "HOL-Library" + 
-  options [timeout = 1200] 
+  options [timeout = 1200]
+  directories
+    "classes"
+    "monads"
+    "pointers"
+    "preliminaries"
+    "tests"
   theories
     Core_DOM
     Core_DOM_Tests
-  document_files 
+  document_files
     "root.tex"
     "root.bib"
