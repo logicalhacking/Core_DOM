@@ -1,9 +1,36 @@
 To cite the use of this formal theory, please use
 
+  Achim D. Brucker and Michael Herzberg. The Core DOM. In Archive of
+  Formal Proofs, 2018. http://www.isa-afp.org/entries/Core_DOM.html,
+  Formal proof development
 
 A BibTeX entry for LaTeX users is
 
-
+@Article{ brucker.ea:afp-core-dom:2018,
+	abstract  = {In this AFP entry, we formalize the core of the Document Object Model (DOM).
+                     At its core, the DOM defines a tree-like data structure for representing documents
+                     in general and HTML documents in particular. It is the heart of any modern web
+                     browser. Formalizing the key concepts of the DOM is a prerequisite for the formal
+                     reasoning over client-side JavaScript programs and for the analysis of security
+                     concepts in modern web browsers. We present a formalization of the core DOM, with
+                     focus on the node-tree and the operations defined on node-trees, in Isabelle/HOL.
+                     We use the formalization to verify the functional correctness of the most important
+                     functions defined in the DOM standard. Moreover, our formalization is 1) extensible,
+                     i.e., can be extended without the need of re-proving already proven properties
+                     and 2) executable, i.e., we can generate executable code from our specification.},
+	author	  = {Achim D. Brucker and Michael Herzberg},
+	date	  = {2018-12-26},
+	file	  = {https://www.brucker.ch/bibliography/download/2018/brucker.ea-afp-core-dom-outline-2018.pdf},
+	filelabel = {Outline},
+	issn	  = {2150-914x},
+	journal	  = {Archive of Formal Proofs},
+	month	  = {dec},
+	note	  = {\url{http://www.isa-afp.org/entries/Core_DOM.html}, Formal proof development},
+	pdf	  = {https://www.brucker.ch/bibliography/download/2018/brucker.ea-afp-core-dom-2018.pdf},
+	title	  = {The {Core} {DOM}},
+	url	  = {https://www.brucker.ch/bibliography/abstract/brucker.ea-afp-core-dom-2018},
+	year	  = {2018},
+}
 
 An overview of the formalization is given in:
 
@@ -12,6 +39,7 @@ An overview of the formalization is given in:
   ACM Press, 2018. doi:10.1145/3184558.3185980
 
 A BibTeX entry for LaTeX users is
+
 @InProceedings{ brucker.ea:core-dom:2018,
 	abstract = {At its core, the Document Object Model (DOM) defines a tree-like           
                     data structure for representing documents in general and HTML  
